@@ -28,3 +28,16 @@ nav
 {
     background-color: #C3DEF2;
 }
+
+.promo
+{
+    background-color: #5BA7DD;
+    color: white;
+}
+
+.card
+{
+    text-align: center;
+    border: 1px solid black;
+    margin: 5px;
+}
