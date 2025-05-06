@@ -1,5 +1,5 @@
 .top-bar{
-            background-color: #5BA7DD;
+    background-color: #5BA7DD;
         }
 .logo-img {
     height: 120px; /* dostosuj wg uznania */
@@ -40,4 +40,9 @@ nav
     text-align: center;
     border: 1px solid black;
     margin: 5px;
+}
+
+footer
+{
+    background-color: #5BA7DD;
 }
