@@ -1,3 +1,25 @@
 .top-bar{
             background-color: #5BA7DD;
         }
+.logo-img {
+    height: 120px; /* dostosuj wg uznania */
+}
+
+nav
+{
+          background-color: #C3DEF2;
+}
+
+.btn-kafelek {
+    background-color: #5BA7DD;
+    color: white;
+    border: 2px solid white;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.75rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-kafelek:hover {
+    background-color: #4899d0;
+    color: white;
+}
