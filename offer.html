@@ -69,74 +69,100 @@
         </div>
     </header>
 
-  <!-- Sekcja marek -->
-    <section class="brands py-5 text-center">
-        <div class="container">
-            <h2>Nasze marki</h2>
-            <div class="row justify-content-center mt-4">
-                <div class="col-4 col-md-2"><img src="images/mistrall.png" alt="Mistrall" class="img-fluid"></div>
-                <div class="col-4 col-md-2"><img src="images/robinson.png" alt="Robinson" class="img-fluid"></div>
-                <div class="col-4 col-md-2"><img src="images/jaxon.jpg" alt="Jaxon" class="img-fluid"></div>
-                <div class="col-4 col-md-2"><img src="images/mikado.png" alt="Mistrall" class="img-fluid"></div>
-                <div class="col-4 col-md-2"><img src="images/cralusso.jpg" alt="Robinson" class="img-fluid"></div>
-                <div class="col-4 col-md-2"><img src="images/browning.png" alt="Jaxon" class="img-fluid"></div>
-                
-            </div>
+ <!-- Offers -->
+<section class="bg-light py-5">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Filters -->
+      <div class="col-md-3 bg-primary text-white p-4 rounded-start">
+        <h5 class="mb-3">FILTRY</h5>
+
+        <!-- Category -->
+        <div class="mb-3">
+          <p class="fw-bold mb-1">Kategoria</p>
+          <div><input type="checkbox" id="wedki"> <label for="wedki">Wędki</label></div>
+          <div><input type="checkbox" id="kolowrotki"> <label for="kolowrotki">Kołowrotki</label></div>
+          <div><input type="checkbox" id="zyly"> <label for="zyly">Żyłki</label></div>
         </div>
-    </section>
 
-   <!-- Sekcja promocji -->
-    <section class="promo py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Promocje</h2>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center">
-            <div class="col">
-                <div class="card h-100 mx-auto">
-                    <img src="images/stinger.png" class="card-img-top" alt="Wędka">
-                    <div class="card-body">
-                        <h5 class="card-title">Wędka Robinson Stinger X-Cross Feeder 3,30m 20-60g</h5>
-                        <p class="card-text"><span class="text-danger fw-bold">200 zł</span> <del>230 zł</del></p>
-                        <a href="#" class="btn btn-primary">Sprawdź</a>
-                    </div>
-                </div>
-            </div>
+        <!-- Brand -->
+        <div class="mb-3">
+          <p class="fw-bold mb-1">Marka</p>
+          <div><input type="checkbox" id="mikado"> <label for="mikado">Mikado</label></div>
+          <div><input type="checkbox" id="robinson"> <label for="robinson">Robinson</label></div>
+          <div><input type="checkbox" id="mistrall"> <label for="mistrall">Mistrall</label></div>
+          <div><input type="checkbox" id="jaxon"> <label for="jaxon">Jaxon</label></div>
+        </div>
 
-            <div class="col">
-                <div class="card h-100 mx-auto">
-                    <img src="images/roxten.jpg" class="card-img-top" alt="Wędka">
-                    <div class="card-body">
-                        <h5 class="card-title">Kołowrotek Mistrall Roxten Method Feeder FD50</h5>
-                        <p class="card-text"><span class="text-danger fw-bold">170 zł</span> <del>199 zł</del></p>
-                        <a href="#" class="btn btn-primary">Sprawdź</a>
-                    </div>
-                </div>
+        <!-- Price -->
+        <div class="mb-4">
+          <p class="fw-bold mb-1">Cena</p>
+          <input type="range" class="form-range" min="0" max="1000" id="priceRange">
+          <div class="d-flex justify-content-between">
+            <span>0 zł</span>
+            <span>1000 zł</span>
+          </div>
+        </div>
+
+        <button class="btn btn-light w-100 text-primary fw-bold">FILTRUJ</button>
+      </div>
+
+      <!-- Products -->
+      <div class="col-md-9 p-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <input type="text" class="form-control w-50" placeholder="Wędka">
+          <button class="btn btn-primary ms-3">SZUKAJ</button>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+          <!-- Product -->
+          <div class="col">
+            <div class="card h-100 text-center">
+              <img src="images/product1.jpg" class="card-img-top" alt="Produkt 1">
+              <div class="card-body">
+                <h6 class="card-title">Robinson Flexcore Feeder 3.6 m 120 gr</h6>
+                <p class="card-text fw-bold">239,00 zł</p>
+              </div>
             </div>
+          </div>
+
           
           <div class="col">
-                <div class="card h-100 mx-auto">
-                    <img src="images/haczyki.jpg" class="card-img-top" alt="Wędka">
-                    <div class="card-body">
-                        <h5 class="card-title">Haczyki wędkarskie Sensas 4530 Bronze</h5>
-                        <p class="card-text"><span class="text-danger fw-bold">5.99 zł</span> <del>7.99 zł</del></p>
-                        <a href="#" class="btn btn-primary">Sprawdź</a>
-                    </div>
-                </div>
+            <div class="card h-100 text-center">
+              <img src="images/product2.jpg" class="card-img-top" alt="Produkt 2">
+              <div class="card-body">
+                <h6 class="card-title">Westin W3 Powershad 240cm M 7–25g</h6>
+                <p class="card-text fw-bold">510,00 zł</p>
+              </div>
             </div>
-          
-          <div class="col">
-                <div class="card h-100 mx-auto">
-                    <img src="images/zylka.png" class="card-img-top" alt="Wędka">
-                    <div class="card-body">
-                        <h5 class="card-title">Żyłka Mikado Sensual N.G Classic 0.18 mm /150m</h5>
-                        <p class="card-text"><span class="text-danger fw-bold">10.99 zł</span> <del>12.99 zł</del></p>
-                        <a href="#" class="btn btn-primary">Sprawdź</a>
-                    </div>
-                </div>
-            </div>
+          </div>
 
-            <!-- Powtórz dla kolejnych kart -->
+          <div class="col">
+            <div class="card h-100 text-center">
+              <img src="images/product3.jpg" class="card-img-top" alt="Produkt 3">
+              <div class="card-body">
+                <h6 class="card-title">PRESTON Ignition METHOD FEEDER 12 ft</h6>
+                <p class="card-text fw-bold">289,00 zł</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 text-center">
+              <img src="images/product4.jpg" class="card-img-top" alt="Produkt 4">
+              <div class="card-body">
+                <h6 class="card-title">DAIWA REGAL 13 ft</h6>
+                <p class="card-text fw-bold">299,00 zł</p>
+              </div>
+            </div>
+          </div>
+
+          
+
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- Newsletter -->
