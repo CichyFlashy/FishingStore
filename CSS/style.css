@@ -2,7 +2,7 @@
     background-color: #5BA7DD;
         }
 .logo-img {
-    height: 120px; /* dostosuj wg uznania */
+    height: 120px; 
 }
 
 nav
@@ -49,4 +49,9 @@ footer
 
 .custom-bg {
   background-color: #4899d0; /* np. delikatny błękit */
+}
+
+.py-5
+{
+    background-color: #5BA7DD;
 }
