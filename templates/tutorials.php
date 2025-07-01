@@ -8,19 +8,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
-   <!-- Top bar -->
+<?php session_start(); ?>
+<!-- Top bar -->
 <div class="top-bar text-white py-2">
   <div class="container d-flex justify-content-between align-items-center flex-wrap">
-    <!-- Dane kontaktowe -->
     <div class="d-flex align-items-center gap-3">
       <span><i class="bi bi-geo-alt-fill"></i> Rybnik, Polska</span>
       <span><i class="bi bi-envelope-fill"></i> kontakt@mojafirma.pl</span>
       <span><i class="bi bi-telephone-fill"></i> +48 123 456 789</span>
     </div>
-
-    <!-- Ikony social media -->
     <div class="d-flex gap-3 mt-2 mt-md-0">
       <a href="https://www.facebook.com" class="text-white"><i class="bi bi-facebook"></i></a>
       <a href="https://www.instagram.com" class="text-white"><i class="bi bi-instagram"></i></a>
@@ -28,84 +28,105 @@
     </div>
   </div>
 </div>
-    
-<nav class="navbar navbar-expand-lg navbar-dark">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-nav-style">
     <div class="container">
-        <a class="navbar-brand" href="index.html"><img src="../images/logo.png" class="logo-img" alt="Logo"></a>
+        <a class="navbar-brand" href="../templates/index.php"><img src="../images/logo.png" class="logo-img" alt="Logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="mainNavbar">
             <ul class="navbar-nav mx-auto d-flex gap-4">
-                <li class="nav-item">
-                    <a class="btn btn-kafelek" href="offer.html">Oferta</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn btn-kafelek" href="tutorials.html">Poradniki</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn btn-kafelek" href="events.html">Wydarzenia</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn btn-kafelek" href="about.html">O nas</a>
-                </li>
-            </ul>
+    <li class="nav-item">
+        <a class="nav-link custom-link px-3 py-2" href="offer.php">Oferta</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link custom-link px-3 py-2" href="tutorials.php">Poradniki</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link custom-link px-3 py-2" href="events.php">Wydarzenia</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link custom-link px-3 py-2" href="about.php">O nas</a>
+    </li>
+</ul>
 
+            <!-- Dynamiczne logowanie i koszyk -->
+<div class="d-flex align-items-center gap-3">
+    <!-- Koszyk -->
+    <a href="cart.php" class="btn btn-outline-light position-relative">
+        <i class="fas fa-shopping-cart fa-lg"></i>
+    </a>
 
-            <div class="login ms-3">
-                <a href="login.html" class="btn btn-kafelek">Zaloguj się</a>
-            </div>
+    <!-- Logowanie -->
+    <?php if (isset($_SESSION['username'])): ?>
+        <div class="d-flex align-items-center gap-2">
+            <span class="text-white fw-semibold">Witaj, <?= htmlspecialchars($_SESSION['username']); ?></span>
+            <a href="../PHP/logout.php" class="btn btn-logout btn-sm">Wyloguj się</a>
+        </div>
+    <?php else: ?>
+        <a href="login.php" class="btn btn-kafelek">Zaloguj się</a>
+    <?php endif; ?>
+</div>
+
         </div>
     </div>
 </nav>
 
  <!-- Hero Section -->
-<header class="bg-dark text-white text-center" 
+    <header class="bg-dark text-white text-center" 
     style="background-image: url('../images/banner.png'); background-size: cover; background-position: center; min-height: 400px; display: flex; align-items: center;">
 
         <div class="container">
             
-            <a href="floats.html" class="btn btn-light btn-lg mt-3 btn-kafelek">Spławiki</a>
+            <a href="floats.php" class="btn btn-light btn-lg mt-3 btn-kafelek">Spławiki</a>
         </div>
-</header>
+    </header>
 
-<!-- Log in -->
-<section class="py-5 bg-light">
+
+
+<!-- Tutorials -->
+<section class="py-5 custom-bg">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-6 col-lg-5">
-        <div class="card shadow rounded-4">
+    <h2 class="text-center mb-4">Poradniki</h2>
+    <div class="row justify-content-center g-4">
+      
+      <!-- Tutorial 1 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card h-100 text-center shadow-sm">
+          <img src="../images/spl.jpg" class="card-img-top" alt="Spławik">
           <div class="card-body">
-            <h3 class="card-title mb-4 text-center">Zaloguj się</h3>
-            <form action="login_process.php" method="POST">
-              <div class="mb-3">
-                <label for="email" class="form-label">Adres e-mail</label>
-                <input type="email" class="form-control" id="email" name="email" required placeholder="np. jan@wedkarz.pl">
-              </div>
-              <div class="mb-3">
-                <label for="password" class="form-label">Hasło</label>
-                <input type="password" class="form-control" id="password" name="password" required placeholder="••••••••">
-              </div>
-              <div class="d-grid mb-3">
-                <button type="submit" class="btn btn-primary">Zaloguj się</button>
-              </div>
-              <div class="text-center">
-                <a href="register.html">Nie masz konta? Zarejestruj się</a>
-              </div>
-              <div class="text-center mt-2">
-                <a href="#">Nie pamiętasz hasła?</a>
-              </div>
-            </form>
+            <p class="card-text">Jak dobrać spławik do warunków nad wodą?</p>
           </div>
         </div>
       </div>
+
+      <!-- Tutorial 2 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card h-100 text-center shadow-sm">
+          <img src="../images/zan.jpg" class="card-img-top" alt="Zanęta">
+          <div class="card-body">
+            <p class="card-text">Jak przygotować zanętę?</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial 3 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card h-100 text-center shadow-sm">
+          <img src="../images/hak.jpg" class="card-img-top" alt="Haczyk">
+          <div class="card-body">
+            <p class="card-text">Jak zawiązać haczyk?</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-
 <!-- Newsletter -->
-<section class="bg-info-subtle py-4">
+<section class="bg-nav-style py-4">
   <div class="container">
     <div class="row mb-3">
       <!-- Newsletter -->
@@ -131,10 +152,10 @@
       <!-- Linki -->
       <div class="col-md-4">
         <ul class="list-unstyled">
-          <li><a href="offer.html" class="text-dark text-decoration-none">Oferta</a></li>
-          <li><a href="tutorials.html" class="text-dark text-decoration-none">Poradniki</a></li>
-          <li><a href="events.html" class="text-dark text-decoration-none">Wydarzenia</a></li>
-          <li><a href="about.html" class="text-dark text-decoration-none">O nas</a></li>
+          <li><a href="offer.php" class="text-dark text-decoration-none">Oferta</a></li>
+          <li><a href="tutorials.php" class="text-dark text-decoration-none">Poradniki</a></li>
+          <li><a href="events.php" class="text-dark text-decoration-none">Wydarzenia</a></li>
+          <li><a href="about.php" class="text-dark text-decoration-none">O nas</a></li>
         </ul>
       </div>
     </div>

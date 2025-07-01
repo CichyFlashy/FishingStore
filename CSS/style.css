@@ -1,13 +1,25 @@
-.top-bar{
+html, body { height: 100%; }
+
+.top-bar {
     background-color: #5BA7DD;
-        }
+}
+
 .logo-img {
     height: 120px; 
 }
 
-nav
-{
-          background-color: #C3DEF2;
+nav {
+    background-color: #C3DEF2;
+    
+}
+
+.brands {
+    background-color: #C3DEF2;
+}
+
+.promo {
+    background-color: #E9F6FF;
+    color: white;
 }
 
 .btn-kafelek {
@@ -24,34 +36,76 @@ nav
     color: white;
 }
 
-.brands
-{
-    background-color: #C3DEF2;
-}
-
-.promo
-{
-    background-color: #5BA7DD;
-    color: white;
-}
-
-.card
-{
+.card {
     text-align: center;
     border: 1px solid black;
     margin: 5px;
 }
 
-footer
-{
+footer {
     background-color: #5BA7DD;
+    color: #ffffff;
 }
 
 .custom-bg {
-  background-color: #4899d0; /* np. delikatny błękit */
+    background-color: #5BA7DD; 
 }
 
-.py-5
-{
+.bg-nav-style {
+  background-color: #C3DEF2;
+    color: #0d6efd;
+}
+
+.bg-light-blue {
+    background-color: #C3DEF2; 
+}
+
+.min-vh-60 {
+    min-height: 60vh;
+}
+
+.navbar-nav .nav-link.custom-link {
+    color: #0d6efd;
+    font-weight: 500;
+    font-size: 1.05rem;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+}
+
+.navbar-nav .nav-link.custom-link:hover {
+    background-color: rgba(13, 110, 253, 0.1);
+    color: #0a58ca;
+    border-bottom: 2px solid #0d6efd;
+}
+
+.btn-kafelek {
     background-color: #5BA7DD;
+    color: white;
+    border: 2px solid white;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.75rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-kafelek:hover {
+    background-color: #4899d0;
+    color: white;
+}
+
+
+.btn-logout {
+    background-color: transparent;
+    color: #5BA7DD;
+    border: 2px solid #5BA7DD;
+    padding: 0.4rem 1.2rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-logout:hover {
+    background-color: #5BA7DD;
+    color: white;
+    text-decoration: none;
 }
